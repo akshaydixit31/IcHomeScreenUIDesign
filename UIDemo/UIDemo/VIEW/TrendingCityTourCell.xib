@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrendingCityTourCellId" rowHeight="270" id="KGk-i7-Jjw" customClass="TrendingCityTourCell" customModule="UIDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="269.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sy0-r7-EHo">
+                        <rect key="frame" x="296" y="8" width="62" height="37"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="pageIndicatorTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <action selector="pageControllerAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="292-dm-YeY"/>
+                        </connections>
+                    </pageControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending City Tour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxD-dN-gcO">
+                        <rect key="frame" x="107.5" y="16" width="151" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BWL-iO-sei">
+                        <rect key="frame" x="0.0" y="51.5" width="366" height="218.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RCu-fM-Gxu">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BWL-iO-sei" firstAttribute="top" secondItem="qxD-dN-gcO" secondAttribute="bottom" constant="15" id="WT0-2U-jDp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="BWL-iO-sei" secondAttribute="bottom" id="5YF-90-yaj"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="BWL-iO-sei" secondAttribute="trailing" id="AJF-s0-buK"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="sy0-r7-EHo" secondAttribute="trailing" constant="8" id="CKL-Z5-B2E"/>
+                <constraint firstItem="BWL-iO-sei" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="UH1-Xy-y0M"/>
+                <constraint firstItem="sy0-r7-EHo" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="8" id="bkP-Dq-mQc"/>
+                <constraint firstItem="qxD-dN-gcO" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="e7l-OO-7hj"/>
+                <constraint firstItem="qxD-dN-gcO" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="tjJ-2S-tXS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellTitleLabel" destination="qxD-dN-gcO" id="1A7-aj-m7K"/>
+                <outlet property="hotelCollectionView" destination="BWL-iO-sei" id="8lR-Z5-3ab"/>
+                <outlet property="pageController" destination="sy0-r7-EHo" id="NO9-Yr-r3j"/>
+            </connections>
+            <point key="canvasLocation" x="-163" y="31"/>
+        </tableViewCell>
+    </objects>
+</document>

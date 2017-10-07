@@ -29,16 +29,35 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrt-o6-GXe">
-                        <rect key="frame" x="209.5" y="114" width="35" height="35"/>
+                        <rect key="frame" x="210" y="114" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="pao-rc-FBv"/>
                             <constraint firstAttribute="width" constant="35" id="uZb-Dl-7af"/>
                         </constraints>
                         <state key="normal" backgroundImage="icHomeDropdown"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLa-Bp-ZGG" userLabel="LeftView">
+                        <rect key="frame" x="0.0" y="131" width="212" height="2"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="GRe-69-WcC"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-iI-2z7" userLabel="RightView">
+                        <rect key="frame" x="242" y="130.5" width="212" height="2"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="4Qo-c6-CQo"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="mrt-o6-GXe" firstAttribute="leading" secondItem="YLa-Bp-ZGG" secondAttribute="trailing" constant="-2.5" id="IvN-V8-HoV"/>
+                    <constraint firstItem="YLa-Bp-ZGG" firstAttribute="centerY" secondItem="mrt-o6-GXe" secondAttribute="centerY" id="W8z-6c-DOW"/>
+                    <constraint firstItem="LNV-iI-2z7" firstAttribute="centerY" secondItem="mrt-o6-GXe" secondAttribute="centerY" id="XEz-9W-Nfn"/>
                     <constraint firstItem="mrt-o6-GXe" firstAttribute="top" secondItem="GTG-7M-hWh" secondAttribute="bottom" constant="15" id="ngv-0B-Hep"/>
+                    <constraint firstItem="LNV-iI-2z7" firstAttribute="leading" secondItem="mrt-o6-GXe" secondAttribute="trailing" constant="-3" id="oIt-fa-cub"/>
+                    <constraint firstItem="LNV-iI-2z7" firstAttribute="width" secondItem="YLa-Bp-ZGG" secondAttribute="width" id="t26-eT-HgY"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
@@ -47,6 +66,7 @@
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="GTG-7M-hWh" secondAttribute="trailing" id="NuE-Hr-VUA"/>
                 <constraint firstItem="mrt-o6-GXe" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="rag-fl-2r0"/>
                 <constraint firstItem="GTG-7M-hWh" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="txa-nH-UaB"/>
+                <constraint firstItem="YLa-Bp-ZGG" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="uGu-J0-IB7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

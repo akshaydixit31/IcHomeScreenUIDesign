@@ -64,6 +64,10 @@ extension ServicesCell: UICollectionViewDataSource, UICollectionViewDelegate, UI
         cell.serviceImage.image = UIImage(named: self.seviceData.serviceImage[indexPath.row])
         cell.serviceNameLabel.text = self.seviceData.serviceName[indexPath.row]
         
+        let maxSize = CGSize(width: 75, height: 16)
+        let size = cell.serviceNameLabel.sizeThatFits(maxSize)
+        cell.serviceNameLabel.frame = CGRect(origin: CGPoint(x: 0, y: 60), size: size)
+        
         return cell
     }
     
@@ -74,7 +78,7 @@ extension ServicesCell: UICollectionViewDataSource, UICollectionViewDelegate, UI
         var width = UIScreen.main.bounds.width
         width = width/4 - 24
         
-        return CGSize(width: width, height: 200)
+        return CGSize(width: width, height: 130)
         
     }
     

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBi-di-mgh">
-                        <rect key="frame" x="146" y="70" width="59" height="16"/>
+                        <rect key="frame" x="120.5" y="70" width="110" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -35,10 +36,10 @@
             </view>
             <constraints>
                 <constraint firstItem="OBi-di-mgh" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="GGY-Xy-Vc6"/>
+                <constraint firstItem="OBi-di-mgh" firstAttribute="width" secondItem="tG7-9L-ahg" secondAttribute="width" multiplier="2.2" id="OM8-UO-hha"/>
                 <constraint firstItem="tG7-9L-ahg" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="10" id="VTM-yY-oYn"/>
                 <constraint firstItem="OBi-di-mgh" firstAttribute="top" secondItem="tG7-9L-ahg" secondAttribute="bottom" constant="10" id="Xve-FF-7O0"/>
                 <constraint firstItem="tG7-9L-ahg" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="aTc-1o-ryh"/>
-                <constraint firstItem="OBi-di-mgh" firstAttribute="width" secondItem="tG7-9L-ahg" secondAttribute="width" constant="9" id="wn8-1K-oce"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="350" height="230"/>
