@@ -1,5 +1,5 @@
 //
-//  TopNearByEventCell.swift
+//  TopRatedRestaurants.swift
 //  UIDemo
 //
 //  Created by Appinventiv Technologies on 07/10/17.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TopNearByEventCell: UITableViewCell {
-
-    @IBOutlet weak var topEventCollectionView: UICollectionView!
+class TopRatedRestaurants: UITableViewCell {
+    
+    @IBOutlet weak var topRatedResoCollectionView: UICollectionView!
+    
     let hotelDetail = HotelDetails()
     
     override func awakeFromNib() {
@@ -19,18 +20,19 @@ class TopNearByEventCell: UITableViewCell {
         
         let cellNib = UINib(nibName: "HotelDataCollectionCell",
                             bundle: nil)
-        self.topEventCollectionView.register(cellNib,
+        self.topRatedResoCollectionView.register(cellNib,
                                                  forCellWithReuseIdentifier: "HotelDataCollectionCellId")
         
-        self.topEventCollectionView.dataSource = self
-        self.topEventCollectionView.delegate = self
+        self.topRatedResoCollectionView.dataSource = self
+        self.topRatedResoCollectionView.delegate = self
     }
-
     
     
 }
 
-extension TopNearByEventCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TopRatedRestaurants: UICollectionViewDataSource,
+    UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView,
@@ -63,9 +65,9 @@ extension TopNearByEventCell: UICollectionViewDataSource, UICollectionViewDelega
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var width = UIScreen.main.bounds.width
-        width = width / 2 - 20
+        width = width / 4
         
-        return CGSize(width: width, height: 200)
+        return CGSize(width: width, height: 150)
         
     }
 }

@@ -89,9 +89,9 @@ UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var width = UIScreen.main.bounds.width
-        width = width - 50
+        width = width - width/4.5
         
-        return CGSize(width: width, height: 250)
+        return CGSize(width: width, height: 220)
         
     }
     

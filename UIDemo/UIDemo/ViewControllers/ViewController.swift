@@ -27,7 +27,9 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ViewController:
+    UITableViewDataSource,
+UITableViewDelegate {
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,7 +40,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView,
+                   viewForHeaderInSection section: Int) -> UIView? {
         
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeScreenHeaderId") as? HomeScreenHeader else{
             
@@ -56,7 +59,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return 6
         
     }
     
@@ -76,7 +79,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                                                             
             }
             
-            cell.downButtonOutlet.addTarget(self, action: #selector(doneButton),
+            cell.downButtonOutlet.addTarget(self,
+                                            action: #selector(doneButton),
                                             for: UIControlEvents.touchUpInside)
             
             return cell
@@ -115,13 +119,26 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                                                             fatalError()
                                                             
             }
-           
+            
             return cell
             
         case 4:
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TopNearByEventCellId",
                                                            for: indexPath) as? TopNearByEventCell else{
+                                                            
+                                                            fatalError()
+                                                            
+            }
+            cell.twoMoreButton.addTarget(self, action: #selector(twoMoreEventButton),
+                                         for: UIControlEvents.touchUpInside)
+            
+            return cell
+            
+        case 5:
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TopInsuranceSellerId",
+                                                           for: indexPath) as? TopInsuranceSeller else{
                                                             
                                                             fatalError()
                                                             
@@ -162,15 +179,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
         case 2:
             
-            return 300
+            return 280
             
         case 3:
             
-            return 250
+            return 200
             
         case 4:
             
-            return 400
+            return 470
+            
+        case 5:
+            
+            return 250
             
         default:
             
@@ -212,6 +233,9 @@ extension ViewController {
         let topRatedNib = UINib(nibName: "TopNearByEventCell", bundle: nil)
         self.homeScreenTable.register(topRatedNib, forCellReuseIdentifier: "TopNearByEventCellId")
         
+        let topInsuranceNib = UINib(nibName: "TopInsuranceSeller", bundle: nil)
+        self.homeScreenTable.register(topInsuranceNib, forCellReuseIdentifier: "TopInsuranceSellerId")
+        
         self.homeScreenTable.dataSource = self
         self.homeScreenTable.delegate = self
         
@@ -233,7 +257,7 @@ extension ViewController {
         let cell = self.homeScreenTable.cellForRow(at: index) as? ServicesCell
         
         UIView.animate(withDuration: 0.6,
-                       delay: 0, options: .curveEaseInOut,
+                       delay: 0,
                        animations: {
                         
                         if cell?.transform == .identity{
@@ -260,6 +284,17 @@ extension ViewController {
             
         }
         self.navigationController?.pushViewController(moreServiceScene, animated: true)
+        
+    }
+    
+    @objc func  twoMoreEventButton(){
+        
+        guard let twoMoreScene = self.storyboard?.instantiateViewController(withIdentifier: "TwoMoreEventsId") as? TwoMoreEvents else {
+            
+            fatalError()
+            
+        }
+        self.navigationController?.pushViewController(twoMoreScene, animated: true)
         
     }
 }

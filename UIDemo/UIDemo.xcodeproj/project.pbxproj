@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C09A4281F88960100D0190A /* CorporateServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C09A4271F88960100D0190A /* CorporateServicesModel.swift */; };
+		0C0D4FFC1F8B36080060647C /* TwoMoreEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D4FFB1F8B36080060647C /* TwoMoreEvents.swift */; };
+		0C0D4FFF1F8B3BF40060647C /* TopInsuranceSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D4FFD1F8B3BF40060647C /* TopInsuranceSeller.swift */; };
+		0C0D50001F8B3BF40060647C /* TopInsuranceSeller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0D4FFE1F8B3BF40060647C /* TopInsuranceSeller.xib */; };
+		0C0D50021F8B3EDE0060647C /* TopInsurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D50011F8B3EDE0060647C /* TopInsurance.swift */; };
 		0C2DE9221F87625C002F1DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DE9211F87625C002F1DE1 /* AppDelegate.swift */; };
 		0C2DE9241F87625C002F1DE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DE9231F87625C002F1DE1 /* ViewController.swift */; };
 		0C2DE9271F87625C002F1DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DE9251F87625C002F1DE1 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		0C09A4271F88960100D0190A /* CorporateServicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorporateServicesModel.swift; sourceTree = "<group>"; };
+		0C0D4FFB1F8B36080060647C /* TwoMoreEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoMoreEvents.swift; sourceTree = "<group>"; };
+		0C0D4FFD1F8B3BF40060647C /* TopInsuranceSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInsuranceSeller.swift; sourceTree = "<group>"; };
+		0C0D4FFE1F8B3BF40060647C /* TopInsuranceSeller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopInsuranceSeller.xib; sourceTree = "<group>"; };
+		0C0D50011F8B3EDE0060647C /* TopInsurance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInsurance.swift; sourceTree = "<group>"; };
 		0C2DE91E1F87625C002F1DE1 /* UIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2DE9211F87625C002F1DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C2DE9231F87625C002F1DE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +85,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0D50031F8B55D90060647C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C2DE9391F8765DA002F1DE1 /* HomeScreenHeader.xib */,
+				0C2DE93C1F87712F002F1DE1 /* ServicesCell.xib */,
+				0C2DE94C1F87C48E002F1DE1 /* CorporateServices.xib */,
+				0CBAEBF61F88C3FA00BD1221 /* TrendingCityTourCell.xib */,
+				0CBAEC001F88FC2D00BD1221 /* TopRatedRestaurants.xib */,
+				0CBAEC041F890E4000BD1221 /* TopNearByEventCell.xib */,
+				0C0D4FFE1F8B3BF40060647C /* TopInsuranceSeller.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		0C0D50041F8B55EF0060647C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C2DE9441F879725002F1DE1 /* ServiceCollectionViewCell.xib */,
+				0CBAEBFA1F88D55000BD1221 /* HotelDataCollectionCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		0C0D50051F8B57390060647C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C2DE9371F876590002F1DE1 /* HomeScreenHeader.swift */,
+				0C2DE93B1F87712F002F1DE1 /* ServicesCell.swift */,
+				0C2DE94B1F87C48E002F1DE1 /* CorporateServices.swift */,
+				0CBAEBF51F88C3FA00BD1221 /* TrendingCityTourCell.swift */,
+				0CBAEBFF1F88FC2D00BD1221 /* TopRatedRestaurants.swift */,
+				0CBAEC031F890E4000BD1221 /* TopNearByEventCell.swift */,
+				0C0D4FFD1F8B3BF40060647C /* TopInsuranceSeller.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		0C0D50061F8B57620060647C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C2DE9431F879725002F1DE1 /* ServiceCollectionViewCell.swift */,
+				0CBAEBF91F88D55000BD1221 /* HotelDataCollectionCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		0C2DE9151F87625C002F1DE1 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +164,7 @@
 				0C2DE9411F879408002F1DE1 /* Services.swift */,
 				0C09A4271F88960100D0190A /* CorporateServicesModel.swift */,
 				0CBAEBFD1F88E27D00BD1221 /* HotelDetails.swift */,
+				0C0D50011F8B3EDE0060647C /* TopInsurance.swift */,
 			);
 			path = MODEL;
 			sourceTree = "<group>";
@@ -120,15 +175,10 @@
 				0C2DE9211F87625C002F1DE1 /* AppDelegate.swift */,
 				0C2DE93F1F878C40002F1DE1 /* ContainerView.swift */,
 				0C2DE9231F87625C002F1DE1 /* ViewController.swift */,
+				0C0D4FFB1F8B36080060647C /* TwoMoreEvents.swift */,
 				0CBAEBEF1F88B90800BD1221 /* NineMoreServices.swift */,
-				0C2DE9371F876590002F1DE1 /* HomeScreenHeader.swift */,
-				0C2DE93B1F87712F002F1DE1 /* ServicesCell.swift */,
-				0C2DE9431F879725002F1DE1 /* ServiceCollectionViewCell.swift */,
-				0C2DE94B1F87C48E002F1DE1 /* CorporateServices.swift */,
-				0CBAEBF51F88C3FA00BD1221 /* TrendingCityTourCell.swift */,
-				0CBAEBF91F88D55000BD1221 /* HotelDataCollectionCell.swift */,
-				0CBAEBFF1F88FC2D00BD1221 /* TopRatedRestaurants.swift */,
-				0CBAEC031F890E4000BD1221 /* TopNearByEventCell.swift */,
+				0C0D50061F8B57620060647C /* CollectionViewCells */,
+				0C0D50051F8B57390060647C /* TableViewCells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -137,14 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				0C2DE9251F87625C002F1DE1 /* Main.storyboard */,
-				0C2DE9391F8765DA002F1DE1 /* HomeScreenHeader.xib */,
-				0C2DE93C1F87712F002F1DE1 /* ServicesCell.xib */,
-				0C2DE9441F879725002F1DE1 /* ServiceCollectionViewCell.xib */,
-				0C2DE94C1F87C48E002F1DE1 /* CorporateServices.xib */,
-				0CBAEBF61F88C3FA00BD1221 /* TrendingCityTourCell.xib */,
-				0CBAEBFA1F88D55000BD1221 /* HotelDataCollectionCell.xib */,
-				0CBAEC001F88FC2D00BD1221 /* TopRatedRestaurants.xib */,
-				0CBAEC041F890E4000BD1221 /* TopNearByEventCell.xib */,
+				0C0D50041F8B55EF0060647C /* CollectionViewCells */,
+				0C0D50031F8B55D90060647C /* TableViewCells */,
 				0C2DE9281F87625C002F1DE1 /* Assets.xcassets */,
 				0C2DE92A1F87625C002F1DE1 /* LaunchScreen.storyboard */,
 			);
@@ -215,6 +259,7 @@
 				0CBAEC061F890E4000BD1221 /* TopNearByEventCell.xib in Resources */,
 				0CBAEBFC1F88D55000BD1221 /* HotelDataCollectionCell.xib in Resources */,
 				0C2DE92C1F87625C002F1DE1 /* LaunchScreen.storyboard in Resources */,
+				0C0D50001F8B3BF40060647C /* TopInsuranceSeller.xib in Resources */,
 				0C2DE93E1F87712F002F1DE1 /* ServicesCell.xib in Resources */,
 				0C2DE9291F87625C002F1DE1 /* Assets.xcassets in Resources */,
 				0C2DE9271F87625C002F1DE1 /* Main.storyboard in Resources */,
@@ -231,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0D50021F8B3EDE0060647C /* TopInsurance.swift in Sources */,
+				0C0D4FFC1F8B36080060647C /* TwoMoreEvents.swift in Sources */,
 				0C2DE9401F878C40002F1DE1 /* ContainerView.swift in Sources */,
 				0C2DE9421F879408002F1DE1 /* Services.swift in Sources */,
 				0C2DE9381F876590002F1DE1 /* HomeScreenHeader.swift in Sources */,
@@ -240,6 +287,7 @@
 				0C2DE9241F87625C002F1DE1 /* ViewController.swift in Sources */,
 				0C2DE94D1F87C48E002F1DE1 /* CorporateServices.swift in Sources */,
 				0CBAEBF01F88B90800BD1221 /* NineMoreServices.swift in Sources */,
+				0C0D4FFF1F8B3BF40060647C /* TopInsuranceSeller.swift in Sources */,
 				0CBAEBFE1F88E27D00BD1221 /* HotelDetails.swift in Sources */,
 				0CBAEC011F88FC2D00BD1221 /* TopRatedRestaurants.swift in Sources */,
 				0C09A4281F88960100D0190A /* CorporateServicesModel.swift in Sources */,

@@ -24,8 +24,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tsq-ze-WPV">
-                        <rect key="frame" x="10" y="50" width="363" height="167"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tsq-ze-WPV">
+                        <rect key="frame" x="10" y="50" width="363" height="133"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Pg-gJ-7G2">
                             <size key="itemSize" width="50" height="50"/>
@@ -34,21 +34,34 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-Xv-c7Y">
+                        <rect key="frame" x="10" y="183" width="363" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="+2 More &gt;">
+                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="vdw-Xv-c7Y" firstAttribute="top" secondItem="tsq-ze-WPV" secondAttribute="bottom" id="6RJ-KP-x9h"/>
+                </constraints>
             </tableViewCellContentView>
             <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="vdw-Xv-c7Y" secondAttribute="bottom" constant="1" id="2D7-Zt-fni"/>
+                <constraint firstItem="vdw-Xv-c7Y" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="3Ko-Qc-TTC"/>
                 <constraint firstItem="biP-dC-jVt" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="8gb-Cm-gnC"/>
                 <constraint firstItem="tsq-ze-WPV" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="50" id="BJ7-Xo-hJD"/>
                 <constraint firstItem="biP-dC-jVt" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="E7Y-kl-zJV"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="tsq-ze-WPV" secondAttribute="bottom" id="dpB-G5-Vrr"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="tsq-ze-WPV" secondAttribute="trailing" constant="10" id="eCW-1J-q42"/>
                 <constraint firstItem="tsq-ze-WPV" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="fDZ-xC-hvf"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="vdw-Xv-c7Y" secondAttribute="trailing" constant="10" id="xs8-aF-aVU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="topEventCollectionView" destination="tsq-ze-WPV" id="LVD-Or-Vtc"/>
+                <outlet property="twoMoreButton" destination="vdw-Xv-c7Y" id="6Ss-Td-XBf"/>
             </connections>
-            <point key="canvasLocation" x="-49" y="140"/>
+            <point key="canvasLocation" x="-49.5" y="139.5"/>
         </tableViewCell>
     </objects>
 </document>

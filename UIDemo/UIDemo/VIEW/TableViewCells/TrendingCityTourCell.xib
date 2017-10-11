@@ -18,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="366" height="269.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sy0-r7-EHo">
-                        <rect key="frame" x="296" y="8" width="62" height="37"/>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sy0-r7-EHo">
+                        <rect key="frame" x="319" y="8" width="39" height="37"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="pageIndicatorTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="currentPageIndicatorTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BWL-iO-sei">
-                        <rect key="frame" x="0.0" y="51.5" width="366" height="218.5"/>
+                        <rect key="frame" x="10" y="52" width="346" height="218"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RCu-fM-Gxu">
                             <size key="itemSize" width="50" height="50"/>
@@ -50,9 +50,9 @@
             </tableViewCellContentView>
             <constraints>
                 <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="BWL-iO-sei" secondAttribute="bottom" id="5YF-90-yaj"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="BWL-iO-sei" secondAttribute="trailing" id="AJF-s0-buK"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="BWL-iO-sei" secondAttribute="trailing" constant="10" id="AJF-s0-buK"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="sy0-r7-EHo" secondAttribute="trailing" constant="8" id="CKL-Z5-B2E"/>
-                <constraint firstItem="BWL-iO-sei" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="UH1-Xy-y0M"/>
+                <constraint firstItem="BWL-iO-sei" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="UH1-Xy-y0M"/>
                 <constraint firstItem="sy0-r7-EHo" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="8" id="bkP-Dq-mQc"/>
                 <constraint firstItem="qxD-dN-gcO" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="e7l-OO-7hj"/>
                 <constraint firstItem="qxD-dN-gcO" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="tjJ-2S-tXS"/>

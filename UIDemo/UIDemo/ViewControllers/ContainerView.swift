@@ -9,7 +9,7 @@
 import UIKit
 
 class ContainerView: UIViewController {
-
+    
     //    MARK:- Outlet's ..
     
     @IBOutlet weak var mainView: UIView!
@@ -19,7 +19,7 @@ class ContainerView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         NotificationCenter.default.addObserver(forName:NSNotification.Name("sideButtonTapped"),
                                                object: nil,
                                                queue: OperationQueue.main,
@@ -58,6 +58,6 @@ class ContainerView: UIViewController {
         
     }
     
-
+    
     
 }

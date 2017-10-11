@@ -14,7 +14,7 @@ class ServicesCell: UITableViewCell {
     
     @IBOutlet weak var downButtonOutlet: UIButton!
     @IBOutlet weak var serviceCollectionView: UICollectionView!
-   
+    
     
     //    MARK:- Variable's..
     
@@ -42,7 +42,9 @@ class ServicesCell: UITableViewCell {
     
 }
 
-extension ServicesCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension ServicesCell: UICollectionViewDataSource,
+    UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
